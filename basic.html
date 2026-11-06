@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selotion Cookie Consent – Temel örnek</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 16px/1.6 system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 32px 20px 120px; }
+    h1 { font-size: 28px; margin: 0 0 4px; }
+    .muted { opacity: .7; }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    button { font: inherit; padding: 8px 14px; border-radius: 8px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; }
+    pre { background: rgba(127,127,127,.12); padding: 14px; border-radius: 10px; overflow: auto; min-height: 120px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Temel entegrasyon</h1>
+  <p class="muted">Aşağıdaki iki script pasif tanımlıdır. İzin verilmeden çalışmazlar.</p>
+
+  <div class="row">
+    <button onclick="CookieConsent.showPreferences()">Tercihleri aç</button>
+    <button onclick="CookieConsent.acceptAll()">Tümünü kabul et</button>
+    <button onclick="CookieConsent.rejectAll()">Tümünü reddet</button>
+    <button onclick="CookieConsent.reset()">Kaydı sil (yeniden sor)</button>
+  </div>
+
+  <p><a href="#" data-cookie-preferences>Çerez tercihleri</a> (data-cookie-preferences ile de açılabilir)</p>
+
+  <h2>Olay günlüğü</h2>
+  <pre id="log"></pre>
+
+  <!-- Analiz: izin verilince çalışır -->
+  <script type="text/plain" data-cookie-category="analytics">
+    log("analytics scripti çalıştı");
+  </script>
+
+  <!-- Pazarlama: izin verilince çalışır -->
+  <script type="text/plain" data-cookie-category="marketing">
+    log("marketing scripti çalıştı");
+  </script>
+
+  <script>
+    function log(msg) {
+      var el = document.getElementById("log");
+      el.textContent += new Date().toLocaleTimeString() + "  " + msg + "\n";
+    }
+    document.addEventListener("cookieconsent:ready", function (e) {
+      log("ready → karar verildi mi: " + e.detail.hasDecision);
+    });
+    document.addEventListener("cookieconsent:change", function (e) {
+      var p = e.detail.preferences;
+      log("change (" + e.detail.source + ") → analytics:" + p.analytics + " marketing:" + p.marketing + " preferences:" + p.preferences);
+    });
+  </script>
+
+  <!-- CDN yerine yerel dosya. Yayında: https://cdn.selotion.com/cookie-consent/v1/cookie-consent.min.js -->
+  <script
+    src="cookie-consent.min.js"
+    data-language="tr"
+    data-theme="auto"
+    data-position="bottom"
+    data-align="center"
+    data-brand="Örnek Site"
+    data-privacy-url="/gizlilik-politikasi"
+    data-cookie-url="/cerez-politikasi"
+    defer>
+  </script>
+</body>
+</html>

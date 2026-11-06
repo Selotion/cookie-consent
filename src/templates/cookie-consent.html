@@ -1,0 +1,66 @@
+<div class="cc-root">
+
+  <!-- İlk ziyaret banner'ı -->
+  <section class="cc-banner" role="dialog" aria-modal="false"
+           aria-labelledby="cc-banner-title" aria-describedby="cc-banner-text" hidden>
+    <div class="cc-banner__inner">
+      <div class="cc-banner__body">
+        <div class="cc-head">
+          <img class="cc-logo" alt="" hidden>
+          <div>
+            <p class="cc-brand" hidden></p>
+            <h2 class="cc-title" id="cc-banner-title" data-i18n="banner.title"></h2>
+          </div>
+        </div>
+        <p class="cc-text" id="cc-banner-text">
+          <span data-i18n="banner.text"></span>
+          <a class="cc-link" data-link="privacy" data-i18n="banner.privacy" hidden></a>
+          <a class="cc-link" data-link="cookie" data-i18n="banner.cookiePolicy" hidden></a>
+        </p>
+      </div>
+      <div class="cc-actions">
+        <button type="button" class="cc-btn cc-btn--ghost" data-action="customize" data-i18n="actions.customize"></button>
+        <button type="button" class="cc-btn cc-btn--reject" data-action="reject" data-i18n="actions.rejectAll"></button>
+        <button type="button" class="cc-btn cc-btn--accept" data-action="accept" data-i18n="actions.acceptAll"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tercih paneli -->
+  <div class="cc-overlay" hidden>
+    <div class="cc-modal" role="dialog" aria-modal="true"
+         aria-labelledby="cc-modal-title" aria-describedby="cc-modal-intro" tabindex="-1">
+      <header class="cc-modal__head">
+        <div class="cc-head">
+          <img class="cc-logo" alt="" hidden>
+          <div>
+            <p class="cc-brand" hidden></p>
+            <h2 class="cc-title" id="cc-modal-title" data-i18n="modal.title"></h2>
+          </div>
+        </div>
+        <button type="button" class="cc-close" data-action="close" data-i18n-aria="actions.close">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+      <div class="cc-modal__body">
+        <p class="cc-text" id="cc-modal-intro" data-i18n="modal.intro"></p>
+        <ul class="cc-cats"></ul>
+      </div>
+      <footer class="cc-modal__foot">
+        <div class="cc-actions">
+          <button type="button" class="cc-btn cc-btn--ghost" data-action="save" data-i18n="actions.save"></button>
+          <button type="button" class="cc-btn cc-btn--reject" data-action="reject" data-i18n="actions.rejectAll"></button>
+          <button type="button" class="cc-btn cc-btn--accept" data-action="accept" data-i18n="actions.acceptAll"></button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Karar verildikten sonra tercihleri yeniden açan düğme -->
+  <button type="button" class="cc-reopen" data-action="reopen" data-i18n-aria="reopen" hidden>
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 4.5 4.5 0 0 1-5-4.5A4.5 4.5 0 0 1 12 3z"/><circle cx="8.5" cy="11" r="1" fill="currentColor"/><circle cx="12" cy="16" r="1" fill="currentColor"/><circle cx="15.5" cy="13" r="1" fill="currentColor"/></svg>
+  </button>
+
+  <!-- Ekran okuyucu duyuruları -->
+  <div class="cc-sr" role="status" aria-live="polite"></div>
+</div>

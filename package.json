@@ -1,0 +1,18 @@
+{
+  "name": "selotion-cookie-consent",
+  "version": "1.0.0",
+  "description": "Açık kaynaklı, ücretsiz, hafif ve altyapıdan bağımsız çerez izin yönetim kütüphanesi.",
+  "license": "MIT",
+  "author": "Selotion",
+  "type": "module",
+  "main": "dist/cookie-consent.min.js",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node build.mjs && node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "jsdom": "^26.0.0"
+  }
+}

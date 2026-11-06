@@ -1,0 +1,46 @@
+{
+  "banner": {
+    "title": "Çerez tercihleriniz",
+    "text": "Siteyi çalıştırmak için zorunlu çerezler kullanırız. Analiz, pazarlama ve tercih çerezleri yalnızca sizin izninizle etkinleşir.",
+    "privacy": "Gizlilik politikası",
+    "cookiePolicy": "Çerez politikası"
+  },
+  "actions": {
+    "acceptAll": "Tümünü kabul et",
+    "rejectAll": "Tümünü reddet",
+    "customize": "Tercihleri düzenle",
+    "save": "Seçimlerimi kaydet",
+    "close": "Kapat"
+  },
+  "modal": {
+    "title": "Çerez tercihleri",
+    "intro": "Hangi çerez kategorilerine izin vereceğinizi seçin. Tercihinizi istediğiniz zaman değiştirebilirsiniz."
+  },
+  "switch": {
+    "always": "Her zaman açık",
+    "on": "Açık",
+    "off": "Kapalı"
+  },
+  "reopen": "Çerez tercihlerini aç",
+  "status": {
+    "saved": "Çerez tercihleriniz kaydedildi."
+  },
+  "categories": {
+    "necessary": {
+      "title": "Zorunlu",
+      "description": "Güvenlik ve bu tercihin hatırlanması gibi sitenin çalışması için gerekir. Kapatılamaz."
+    },
+    "analytics": {
+      "title": "Analiz",
+      "description": "Sitenin nasıl kullanıldığını anlamamıza ve siteyi geliştirmemize yardımcı olur."
+    },
+    "marketing": {
+      "title": "Pazarlama",
+      "description": "Reklam göstermek ve kampanyaların performansını ölçmek için kullanılır."
+    },
+    "preferences": {
+      "title": "Tercihler",
+      "description": "Dil veya bölge gibi ayarlarınızı hatırlar."
+    }
+  }
+}

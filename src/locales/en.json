@@ -1,0 +1,46 @@
+{
+  "banner": {
+    "title": "Your cookie choices",
+    "text": "We use necessary cookies to run this site. Analytics, marketing and preference cookies are only used if you allow them.",
+    "privacy": "Privacy policy",
+    "cookiePolicy": "Cookie policy"
+  },
+  "actions": {
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "customize": "Edit preferences",
+    "save": "Save my choices",
+    "close": "Close"
+  },
+  "modal": {
+    "title": "Cookie preferences",
+    "intro": "Choose which categories of cookies you allow. You can change your choice at any time."
+  },
+  "switch": {
+    "always": "Always on",
+    "on": "On",
+    "off": "Off"
+  },
+  "reopen": "Open cookie preferences",
+  "status": {
+    "saved": "Your cookie preferences were saved."
+  },
+  "categories": {
+    "necessary": {
+      "title": "Necessary",
+      "description": "Required for the site to work, such as security and remembering this choice. These cannot be turned off."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "description": "Help us understand how the site is used so we can improve it."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "description": "Used to show ads and measure how well campaigns perform."
+    },
+    "preferences": {
+      "title": "Preferences",
+      "description": "Remember your settings, such as language or region."
+    }
+  }
+}
